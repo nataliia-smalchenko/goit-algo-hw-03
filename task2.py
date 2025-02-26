@@ -28,6 +28,9 @@ def draw_koch_snowflake(order, size=300):
 
 try:
     recursion_order = int(input("Введіть рівень рекурсії (ціле число): "))
-    draw_koch_snowflake(recursion_order)
+    if recursion_order >= 0:
+        draw_koch_snowflake(recursion_order)
+    else:
+        print("Ви ввели відʼємне число. Перезапустіть програму ще раз.")
 except ValueError:
     print("Ви ввели не ціле число. Перезапустіть програму ще раз.")
